@@ -40,6 +40,30 @@ a{
 .heroh1 img{
     transform: translateX(20px);
 }
+.heroimgbox{
+    min-width: 600px;
+    max-width: 800px;
+}
+.heroimgbox img{
+    width: 100%;
+    height: auto;
+}
+@media (max-width: 1250px){
+    .herocon{
+        flex-direction: column;
+    }
+    .herocon .col-lg-6{
+        width: auto;
+    }
+    .herotext{
+        width: auto !important;
+    }
+}
+@media (max-width: 600px){
+    .heroimgbox{
+        min-width: 0 !important;
+    }
+}
 .herop{
     font-size: 15px;
     color: var(--theme-blue);
@@ -81,6 +105,7 @@ a{
     display: flex;
     align-items: center;
     transition: .4s;
+    text-align: center;
 }
 .owl-carousel .imgbox:hover{
     box-shadow: 0 10px 10px 1px silver;
