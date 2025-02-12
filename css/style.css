@@ -9,7 +9,7 @@
     --theme-darksilver: #9A9EA6;
 }
 .minscreen{
-    max-width: 140rem;
+    max-width: 1700px;
     min-width: 240px;
     display: flex;
     align-items: center;
