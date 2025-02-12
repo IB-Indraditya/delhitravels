@@ -1,0 +1,105 @@
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/dynamic.js"></script>
+    <title>Travel</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
+
+    <!-- jQuery (Required for Owl Carousel) -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+
+    <!-- Owl Carousel JS -->
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+</head>
+<body class="bg-secondary">
+    <section class="minscreen">
+        <header id="theader"></header>
+        <section class="hero p-5 pb-2 w-100 bg-white">
+            <section class="row mt-5 pt-4">
+                <div class="col-lg-6 mt-5 p-4 pl-5">
+                    <p class="herop mx-5 px-3 fw-bold mt-4"><i class="fa-solid fa-plane fa-rotate-by" style="--fa-rotate-angle: -45deg;"></i> &nbsp &nbsp Explore the wonderful places!</p>
+                    <h1 class="mt-4 mx-5 px-2 heroh1">Liburan & nikmati <span style="color: var(--theme-blue);">tempat baru</span> di indonesia <img src="https://media.istockphoto.com/id/914505568/vector/people-on-a-desert-island-a-cry-for-help.jpg?s=612x612&w=0&k=20&c=_EBrWJV5D-9Rmej6qq7Ld1qYjcJTWkFZWvgltMC5Bz8=" alt="" height="70"></h1>
+                    <p class="herotext mt-4 mx-5 px-3">Destinize membuat kamu selalu update terkait tempat liburan baru di Indonesia dengan mengikuti perkembangan para influencer di sosial media ✨</p>
+                    <span>
+                        <button class="mt-4 mx-5 herobtn">Explore Us &nbsp&nbsp<i class="fa-solid fa-arrow-right-long"></i></button>
+                        <button class="rounded-5 playbtn"><i class="fa-solid fa-play"></i></button> <span class="fw-bold" style="color: var(--theme-darksilver);">&nbsp&nbspView Demo</span>
+                    </span>
+                </div>
+                <div class="col-lg-6 mt-5">
+                    <div class="heroimgbox">
+                        <img src="images/heroimg.png" alt="">
+                    </div>
+                </div>
+            </section>
+        </section>
+        <section class="partners p-5 py-5 w-100 bg-white d-flex justify-content-center">
+            <div class="owl-carousel">
+                <div class="imgbox"> <img src="images/image 27.png" alt="Slide 1"> </div>
+                <div class="imgbox"> <img src="images/image 27.png" alt="Slide 1"> </div>
+                <div class="imgbox"> <img src="images/image 27.png" alt="Slide 1"> </div>
+                <div class="imgbox"> <img src="images/image 27.png" alt="Slide 1"> </div>
+                <div class="imgbox"> <img src="images/image 27.png" alt="Slide 1"> </div>
+                <div class="imgbox"> <img src="images/image 27.png" alt="Slide 1"> </div>
+            </div>
+        </section>
+        <section class="favdes p-5 w-100 bg-white">
+            <p class="mx-5 favdesp">Favourite Destination</p>
+            <div class="d-flex justify-content-between">
+                <h1 class="favdesh1 fw-bold mx-5"><i class="fa-solid fa-plane fa-rotate-by fa-small" style="--fa-rotate-angle: -45deg; color: var(--theme-blue);"></i> &nbsp&nbspTourist Favourite Destinations</h1>
+                <p class="fw-bold" style="color: var(--theme-blue);">See More &nbsp<i class="fa-solid fa-angle-right"></i></p>
+            </div>
+            <div class="row w-100 text-center my-5 d-flex justify-content-center">
+                <div class="col-lg-2 border-1 my-3 imgbox ib1">
+                    <img src="images/image 4.png" alt="">
+                </div>
+                <div class="col-lg-2 border-1 my-3  imgbox ib2">
+                    <img src="images/image5.png" alt="">
+                </div>
+                <div class="col-lg-2 border-1 my-3  imgbox ib3">
+                    <img src="images/image 4.png" alt="">
+                </div>
+                <div class="col-lg-2 border-1 my-3 imgbox ib4">
+                    <img src="images/image5.png" alt="">
+                </div>
+            </div>
+        </section>
+        <footer id="tfooter"></footer>
+    </section>
+</body>
+<script>
+    loadHTML('header.html', 'theader');
+    // loadHTML('body.html', 'tbody');
+    loadHTML('footer.html', 'tfooter');
+</script>
+<script>
+    $(document).ready(function(){
+        $(".owl-carousel").owlCarousel({
+            loop: true,               // Infinite loop
+            margin: 10,               // Space between items
+            nav: false,                // Show navigation arrows
+            autoplay: true,           // Enable autoplay
+            autoplayTimeout: 2000,    // Time between slides (2000ms = 2s)
+            autoplayHoverPause: true, // Pause on hover
+            responsive: {
+                0: { items: 1 },      // 1 item on small screens
+                600: { items: 2 },    // 2 items on medium screens
+                1000: { items: 4 }    // 3 items on large screens
+            }
+        });
+    });
+    function updateBeforeContent(selector, text) {
+        document.querySelector(selector).style.setProperty('--content', `"${text}"`);
+    }
+
+    // Example: Update the content dynamically
+    updateBeforeContent('.favdes .ib1', 'Cannada');
+    updateBeforeContent('.favdes .ib2', 'London');
+    updateBeforeContent('.favdes .ib3', 'Dubai');
+    updateBeforeContent('.favdes .ib4', 'Italy');
+
+    </script>
+    
+</html>
