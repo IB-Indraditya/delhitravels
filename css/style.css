@@ -7,6 +7,7 @@
     --theme-lightblue: #E5EDFF;
     --theme-silver: #F0F1F2;
     --theme-darksilver: #9A9EA6;
+    --theme-blue-fade: rgba(0, 0, 255, .1);
 }
 .minscreen{
     max-width: 1920px;
@@ -142,7 +143,7 @@ a{
     padding: 20px;
     width: 160px;
     background-color: rgba(255, 255, 255, .7);
-    z-index: 10000;
+    /* z-index: 10000; */
     border-radius: 5px;
     font-weight: bold;
 }
@@ -155,4 +156,22 @@ a{
 .favdes .imgbox:hover img{
     transform: scale(1.05);
     cursor: pointer;
+}
+.reservecon{
+    margin-top: 11rem;
+    min-width: 360px;
+    max-width: 360px;
+    height: 380px;
+    box-shadow: 55px -55px 80px .1px var(--theme-blue-fade), -5px 5px 25px rgba(0, 0, 0, .1) !important;
+}
+.reserveimg {
+    margin-right: 20px; height: 4rem;
+}
+.reservetext{
+    width: 430px;
+}
+.reserveimg img{
+    background-color: bisque;
+    border-radius: 7px;
+    padding: 5px;
 }
