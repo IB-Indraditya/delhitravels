@@ -8,6 +8,7 @@
     --theme-silver: #F0F1F2;
     --theme-darksilver: #9A9EA6;
     --theme-blue-fade: rgba(0, 0, 255, .1);
+    --theme-skyblue: #23A6F0;
 }
 .minscreen{
     max-width: 1920px;
@@ -174,4 +175,20 @@ a{
     background-color: bisque;
     border-radius: 7px;
     padding: 5px;
+}
+.gallery3::before{
+    position: absolute;
+    content: "";
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, .6);
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    border-radius: 5px;
+}
+.testimonial .testimoni{
+    margin: auto 20px;
+    height: 400px;
+    /* background-color: #9A9EA6; */
 }
