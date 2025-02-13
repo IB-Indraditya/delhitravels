@@ -37,7 +37,7 @@
             </section>
         </section>
         <section class="partners p-5 py-5 w-100  d-flex justify-content-center">
-            <div class="owl-carousel">
+            <div class="owl-carousel px-5 mx-auto">
                 <div class="imgbox"> <img src="images/image 27.png" alt="Slide 1"> </div>
                 <div class="imgbox"> <img src="images/image 27.png" alt="Slide 1"> </div>
                 <div class="imgbox"> <img src="images/image 27.png" alt="Slide 1"> </div>
@@ -79,15 +79,16 @@
     $(document).ready(function(){
         $(".owl-carousel").owlCarousel({
             loop: true,               // Infinite loop
-            margin: 10,               // Space between items
+            margin: 20,               // Space between items
             nav: false,                // Show navigation arrows
             autoplay: true,           // Enable autoplay
             autoplayTimeout: 2000,    // Time between slides (2000ms = 2s)
-            autoplayHoverPause: true, // Pause on hover
+            autoplayHoverPause: true,
+            rtl: true,
             responsive: {
                 0: { items: 1 },      // 1 item on small screens
                 600: { items: 2 },    // 2 items on medium screens
-                1000: { items: 4 }    // 3 items on large screens
+                1000: { items: 5 }    // 3 items on large screens
             }
         });
     });
