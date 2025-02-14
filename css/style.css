@@ -215,7 +215,7 @@ a{
     height: 400px;
     /* background-color: #9A9EA6; */
 }
-.reservemx{
+.reservemx, .herotext{
     margin-right: 3rem;
     margin-left: 3rem;
 }
@@ -277,5 +277,9 @@ a{
     }
     .reservemx{
         margin: 0 !important;
+    }
+    .herotext{
+        margin-left: auto;
+        margin-right: auto;
     }
 }
