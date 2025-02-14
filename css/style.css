@@ -243,6 +243,10 @@ a{
         display: none;
         transform: translateX(40px);
     }
+    .bluebft .shadow{
+        height: auto !important;
+        flex-direction: column-reverse;
+    }
 }
 @media (max-width: 900px){
     .mapflex{
