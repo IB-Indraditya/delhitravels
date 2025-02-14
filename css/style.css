@@ -5,6 +5,7 @@
 :root{
     --theme-blue: #4475F2;
     --theme-lightblue: #E5EDFF;
+    --theme-blue2: #4372EB;
     --theme-silver: #F0F1F2;
     --theme-darksilver: #9A9EA6;
     --theme-blue-fade: rgba(0, 0, 255, .1);
@@ -22,6 +23,10 @@
     /* border: solid 1px var(--theme-blue); */
     font-family: Plus Jakarta Sans;
 }
+.navitemcontainer{
+    margin-left: auto;
+    margin-right: auto;
+}
 .navitemcontainer .nav-item{
     margin: 0 1.5rem;
     color: var(--theme-darksilver);
@@ -37,8 +42,11 @@ a{
 .heroh1{
     font-size: 70px;
     font-weight: 900;
+    margin-right: 3rem;
+    margin-left: 3rem;
     /* text-shadow: 0 0 4px; */
 }
+
 .heroh1 img{
     transform: translateX(20px);
 }
@@ -50,6 +58,7 @@ a{
     width: 100%;
     height: auto;
 }
+
 @media (max-width: 1250px){
     .herocon{
         flex-direction: column;
@@ -72,7 +81,9 @@ a{
     padding: 5px;
     background-color: var(--theme-lightblue);
     border-radius: 20px;
-    width: 300px
+    width: 300px;
+    margin-right: 3rem;
+    margin-left: 3rem;
 }
 .herotext{
     width: 500px;
@@ -124,6 +135,8 @@ a{
     font-family: "Manrope";
     font-size: 45px;
     line-height: 50px;
+    margin-right: 3rem;
+    margin-left: 3rem;
 }
 .favdes .imgbox{
     min-width: 300px;
@@ -158,6 +171,12 @@ a{
     transform: scale(1.05);
     cursor: pointer;
 }
+@media (max-width: 1200px){
+    .reserve{
+        flex-direction: column;
+        justify-content: center;
+    }
+}
 .reservecon{
     margin-top: 11rem;
     min-width: 360px;
@@ -176,6 +195,9 @@ a{
     border-radius: 7px;
     padding: 5px;
 }
+.gallery3{
+    overflow: hidden;
+}
 .gallery3::before{
     position: absolute;
     content: "";
@@ -187,8 +209,73 @@ a{
     transform: translate(-50%, -50%);
     border-radius: 5px;
 }
+
 .testimonial .testimoni{
     margin: auto 20px;
     height: 400px;
     /* background-color: #9A9EA6; */
+}
+.reservemx{
+    margin-right: 3rem;
+    margin-left: 3rem;
+}
+@media (max-width: 1200px){
+    .testimonialdiv{
+        flex-direction: column;
+    }
+    .testimonial .testimoni{
+        margin: 20px auto;
+        min-width: 300px;
+        height: 400px;
+        /* background-color: #9A9EA6; */
+    }
+}
+@media (max-width: 992px){
+    .show{
+        display: flex;
+        flex-direction: column;
+        margin-left: 0 !important;
+    }
+    .showblock{
+        display: block !important;
+    }
+    .navlocation{
+        display: none;
+        transform: translateX(40px);
+    }
+}
+@media (max-width: 900px){
+    .mapflex{
+        flex-direction: column;
+    }
+    .heroh1{
+        font-size: 50px;
+        margin-left: 0 !important;
+    }
+    /* .heroimgbox{
+        min-width: 400px !important;
+    } */
+    .herop{
+        padding-left: 0 !important;
+        margin-left: 0 !important;
+        width: auto !important;
+    }
+    .testimoni{
+        min-width: 0 !important;
+    }
+    .favdesh1{
+        margin-left: 0 !important;
+    }
+    .reservecon{
+        min-width: 0 !important;
+    }
+    .reservecon img{
+        width: 100%;
+    }
+    .favdes .justify-content-between{
+        flex-direction: column;
+    }
+    .reservemx{
+        margin: 0 !important;
+    }
 }

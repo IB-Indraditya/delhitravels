@@ -5,8 +5,19 @@
     .fthead p{
         font-size: .8rem;
     }
+    @media (max-width: 1200px){
+        .footex{
+            flex-direction: column;
+        }
+    }
+    @media (max-width: 500px){
+        .footex .d-flex{
+            flex-direction: column;
+            margin-left: 2rem !important;
+        }
+    }
 </style>
-<section class="d-flex w-100 mx-auto justify-content-between bg-light py-5">
+<section class="d-flex w-100 mx-auto justify-content-between bg-light py-5 footex">
     <div class="d-flex col-lg-5 px-0 mx-auto">
         <div class="fthead px-3">
             <h4 class="fw-bold mx-5"><img src="images/logo.png" height="25" alt="">&nbsp&nbspDestinize</h4>
