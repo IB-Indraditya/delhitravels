@@ -40,10 +40,10 @@ a{
     /* color: #4475F2; */
 }
 .heroh1{
-    font-size: 70px;
+    font-size: 50px;
     font-weight: 900;
-    margin-right: 3rem;
-    margin-left: 3rem;
+    margin-right: 1rem;
+    margin-left: 0rem;
     /* text-shadow: 0 0 4px; */
 }
 
@@ -81,7 +81,7 @@ a{
     padding: 5px;
     background-color: var(--theme-lightblue);
     border-radius: 20px;
-    width: 300px;
+    /* width: 300px; */
     margin-right: 3rem;
     margin-left: 3rem;
 }
@@ -108,8 +108,9 @@ a{
     color: var(--theme-blue);
 }
 .owl-carousel .imgbox{
-    width: 200px;
-    height: 100px;
+    /* width: 300px; */
+    /* max-height: 400px; */
+    height: 300px;
     margin: 10px auto;
     margin-bottom: 20px;
     border-radius: 2px;
@@ -152,14 +153,19 @@ a{
 .favdes .imgbox::before{
     content: var(--content, "Default Text");;
     position: absolute;
-    bottom: -10px;
-    left: -10px;
-    padding: 20px;
-    width: 160px;
-    background-color: rgba(255, 255, 255, .7);
+    bottom: 0px;
+    left: 0px;
+    height: 120px;
+    padding: 10px 20px;
+    width: 100%;
+    background-color: rgba(255, 255, 255, .8);
     /* z-index: 10000; */
     border-radius: 5px;
     font-weight: bold;
+    /* text-align: center; */
+    margin: 0;
+    transition: .5s;
+    color: #4372EB;
 }
 .favdes .imgbox img{
     /* min-width: 300px; */

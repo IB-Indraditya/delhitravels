@@ -9,21 +9,122 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
     <link rel="icon" href="images/logo.png">
+    <style>
+        .fa-angle-down{
+            transform: translateY(0px);
+            font-size: 10px;
+        }
+        li{
+            list-style: none;
+        }
+        .navitemcontainer{
+            transform: translate(100px, 10px);
+        }
+        @media (max-width: 1210px){
+            .navitemcontainer{
+                transform: translate(0px, 10px);
+            }
+        }
+        @media (max-width: 767px){
+            .navcontact{
+                visibility: collapse;
+            }
+            .brandnav{
+                transform: translateY(15px);
+            }
+        }
+        @media (max-width: 992px){
+            .navitemcontainer .nav-item {
+                margin: 1rem !important;
+            }
+            .br{
+                display: none;
+            }
+            .dropdowns{
+                position: relative !important;
+                transform: translateX(-20px) !important;
+                border: none !important;
+                background-color: transparent !important;
+            }
+        }
+        .nav-link{
+            font-weight: bold;
+        }
+        .dropdowns{
+            position: absolute;
+            background-color: white;
+            border: solid 0px darkslategrey;
+            border-radius: 5px;
+            /* display: none; */
+            width: 240px;
+            max-height: 0;
+            overflow: hidden;
+            transition: .5s;
+            transform: translateX(-50px);
+        }
+        .nav-item:hover .dropdowns{
+            /* display: block; */
+            max-height: 400px;
+            border: solid 1px darkslategrey;
+        }
+        .drop a{
+            text-decoration: none;
+            color: darkslategrey;
+        }
+        .drop{
+            padding: 5px;
+        }
+        .drop:hover a{
+            color: #4475F2 !important;
+            /* background: gainsboro; */
+        }
+        @media(max-width: 1075px){
+            .navitemcontainer .nav-item {
+                margin: 0 1rem;
+            }
+        }
+    </style>
 </head>
 <section class="d-flex justify-content-center">
-    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light p-4 mx-auto" style="max-width: 1920px;">
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-primary p-3 mx-auto" style="max-width: 1920px;">
+        <div class="container">
+            <div class="brand d-flex text-white brandnav">
+                <a href=""><section class="mx-2 text-white"><i class="fa-brands fa-facebook-f fa-xl"></i></section></a>
+                <a href=""><section class="mx-2 text-white"><i class="fa-brands fa-instagram fa-xl"></i></section></a>
+                <a href=""><section class="mx-2 text-white"><i class="fa-brands fa-twitter fa-xl"></i></section></a>
+                <a href=""><section class="mx-2 text-white"><i class="fa-brands fa-linkedin fa-xl"></i></section></a>
+                <a href=""><section class="mx-2 text-white"><i class="fa-brands fa-youtube fa-xl"></i></section></a>
+                <a href=""><section class="mx-2 text-white"><i class="fa-brands fa-whatsapp fa-xl"></i></section></a>
+            </div>
+            
+            
+            <div class="navcontact">
+                <a class="navbar-brand text-white" href="javascript:void();">
+                    <i class="fa-solid fa-phone fa-large"></i>&nbsp&nbsp<span class="text-white">Contact Number</span>
+                </a>
+                <a class="navbar-brand text-white" href="javascript:void();">
+                    <i class="fa-solid fa-envelope fa-large"></i>&nbsp&nbsp<span class="text-white">Mail Address</span>
+                </a>
+            </div>
+            
+            
+            
+        
+        </div>
+    </nav>
+    <nav class="navbar navbar-expand-lg navbar-light fixed-top bg-light p-4 mx-auto d-flex" style="max-width: 1920px; margin-top: 3.6rem;">
         <div class="container">
             <div class="brand">
                 <a class="navbar-brand" href="index.html">
                     <img src="images/logo.png" alt="Logo" height="30">
-                    <a href="" class="fw-bold">Destinize</a>
+                    <a href="" class="fw-bold">Delhi Travels</a>
                 </a>
             </div>
             
-            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content">
+            <button class="navbar-toggler collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#navbar-content" style="border: none !important;">
                 <div class="hamburger-toggle">
                     <div class="hamburger">
-                    <span><i class="fa-solid fa-bars"></i></span>
+                    <span><i class="fa-solid fa-chart-simple fa-rotate-90" style="color: var(--theme-blue);"></i></span>
                     </div>
                 </div>
             </button>
@@ -32,16 +133,50 @@
             <div class="collapse navbar-collapse " id="navbar-content">
                 <ul class="mb-2 mb-lg-0 d-flex navitemcontainer" style="list-style: none;">
                     <li class="nav-item">
-                        <a class="nav-link" href="about.html">About</a>
+                        <a class="nav-link" href="index.html">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void();">About&nbsp<i class="fa-solid fa-angle-down"></i></a>
+                        <br class="br">
+                        <ul class="dropdowns">
+                            <li class="drop"><a href="">About Us</a></li>
+                            <li class="drop"><a href="">Corporate</a></li>
+                            <li class="drop"><a href="">Vision/Mission</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item drophead">
-                        <a class="nav-link" href="destination.html">Destinations</a>
+                        <a class="nav-link" href="javascript:void();">Car&nbspRental&nbsp<i class="fa-solid fa-angle-down"></i></a>
+                        <br class="br">
+                        <ul class="dropdowns">
+                            <li class="drop"><a href="">Toyota Innova Car</a></li>
+                            <li class="drop"><a href="">Toyota Avalon Car</a></li>
+                            <li class="drop"><a href="">Swift Dzire Car Rent</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void();">Packages</a>
+                        <a class="nav-link" href="javascript:void();">Travels&nbsp<i class="fa-solid fa-angle-down"></i></a>
+                        <br class="br">
+                        <ul class="dropdowns">
+                            <li class="drop"><a href="">About Us</a></li>
+                            <li class="drop"><a href="">Corporate</a></li>
+                            <li class="drop"><a href="">Vision/Mission</a></li>
+                            <li class="drop"><a href="">About Us</a></li>
+                            <li class="drop"><a href="">Corporate</a></li>
+                            <li class="drop"><a href="">Vision/Mission</a></li>
+                        </ul>
                     </li>
                     <li class="nav-item">
-                        <a class="nav-link" href="javascript:void();">Book&nbspNow</a>
+                        <a class="nav-link" href="javascript:void();">Tour&nbspPackages&nbsp<i class="fa-solid fa-angle-down"></i></a>
+                        <br class="br">
+                        <ul class="dropdowns">
+                            <li class="drop"><a href="">About Us</a></li>
+                            <li class="drop"><a href="">Corporate</a></li>
+                            <li class="drop"><a href="">Vision/Mission</a></li>
+                            <li class="drop"><a href="">Vision/Mission</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="javascript:void();">Payment</a>
                     </li>
                     <li class="nav-item">
                         <a class="nav-link" href="javascript:void();">Contact&nbspUs</a>
@@ -49,11 +184,11 @@
                 </ul>
                 
             </div>
-            <div class="navlocation">
+            <!-- <div class="navlocation">
                 <a class="navbar-brand" href="javascript:void();">
-                    <i class="fa-solid fa-location-dot" style="color: var(--theme-blue);"></i>&nbsp<span>Location</span>
+                    <i class="fa-solid fa-phone fa-large" style="color: var(--theme-blue);"></i>&nbsp<span>Contact&nbspUs</span>
                 </a>
-            </div>
+            </div> -->
             
             
             

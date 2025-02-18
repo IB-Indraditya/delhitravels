@@ -6,6 +6,8 @@
     <script src="js/dynamic.js"></script>
     <title>Travel</title>
     <!-- Owl Carousel CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.carousel.min.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/assets/owl.theme.default.min.css">
 
@@ -14,6 +16,9 @@
 
     <!-- Owl Carousel JS -->
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
+    <!-- AOS CSS -->
+    <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+
     <style>
         @media(max-width: 1250px){
             .gallerycol3{
@@ -25,11 +30,23 @@
                 width: auto !important;
                 height: 28rem !important;
             }
+            .carousel-inner{
+                max-height: 750px;
+            }
+            .carousel-inner img{
+                height: 500px !important;
+            }
         }
         @media(max-width: 560px){
             .gallery3{
                 width: auto !important;
                 height: 38rem !important;
+            }
+            .carousel-inner{
+                max-height: 750px;
+            }
+            .carousel-inner img{
+                height: 400px !important;
             }
         }
         @media(max-width: 450px){
@@ -42,7 +59,6 @@
             .heroimgbox {
                 min-width: 0 !important;
             }
-            
             .favdesh1{
                 font-size: 35px;
             }
@@ -63,13 +79,28 @@
             .reservecon{
                 min-width: 0px !important;
             }
+            .carousel-inner{
+                max-height: 750px;
+            }
+            .carousel-inner img{
+                height: 300px;
+            }
         }
+        .carousel-inner{
+            max-height: 750px;
+        }
+        .carousel-inner img{
+            height: 800px;
+        }
+        /* .carousel-item{
+
+        } */
     </style>
 </head>
 <body>
     <section class="minscreen">
         <header id="theader"></header>
-        <section class="hero p-5 pb-2 w-100 bg-white">
+        <!-- <section class="hero p-5 pb-2 w-100 bg-white">
             <section class="row mt-5 pt-4 d-flex herocon">
                 <div class="col-lg-6 mt-5 p-4 pl-5">
                     <p class="herop px-3 fw-bold mt-4"><i class="fa-solid fa-plane fa-rotate-by" style="--fa-rotate-angle: -45deg;"></i> &nbsp &nbsp Explore the wonderful places!</p>
@@ -86,15 +117,127 @@
                     </div>
                 </div>
             </section>
+        </section> -->
+        <section class="hero pt-5 pb-2 w-100 bg-white">
+            <div id="carouselExampleCaptions" class="carousel slide" data-bs-ride="carousel">
+                <div class="carousel-indicators">
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="0" class="active" aria-label="Slide 1" aria-current="true"></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="1" aria-label="Slide 2" class=""></button>
+                    <button type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide-to="2" aria-label="Slide 3" class=""></button>
+                </div>
+                <div class="carousel-inner">
+                    <div class="carousel-item carousel-item-next carousel-item-start" data-bs-interval="2000">
+                        <img src="https://www.worldatlas.com/upload/70/33/ab/shutterstock-115227475.jpg" class="d-block w-100 heroCarouselImg" alt="...">
+                        <div class="carousel-caption d-none d-md-block gray p-5" style="transform: translateY(-10rem);">
+                            <div class="col-lg-10 mt-2 p-2 pl-2">
+                                <p class="herop px-3 fw-bold mt-4 w-50"><i class="fa-solid fa-plane fa-rotate-by" style="--fa-rotate-angle: -45deg;"></i> &nbsp &nbsp Explore the wonderful places!</p>
+                                <h1 class="heroh1 mt-4">Vacation &&nbspenjoy <span style="color: var(--theme-blue);">new places</span> in the Manali </h1>
+                                <span>
+                                    <button class="mt-4 mx-5 herobtn">Explore Us &nbsp&nbsp<i class="fa-solid fa-arrow-right-long"></i></button>
+                                    <button class="rounded-5 playbtn"><i class="fa-solid fa-play"></i></button> <span class="fw-bold" style="color: var(--theme-darksilver);">&nbsp&nbspView Demo</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item" data-bs-interval="2500">
+                        <img src="https://s7ap1.scene7.com/is/image/incredibleindia/agra-fort-agra-uttar%20pradesh-3-attr-hero?qlt=82&ts=1726650380726" class="d-block w-100 heroCarouselImg" alt="...">
+                        <div class="carousel-caption d-none d-md-block gray p-5" style="transform: translateY(-10rem);">
+                            <div class="col-lg-10 mt-2 p-2 pl-2">
+                                <p class="herop px-3 fw-bold mt-4 w-50"><i class="fa-solid fa-plane fa-rotate-by" style="--fa-rotate-angle: -45deg;"></i> &nbsp &nbsp Explore the wonderful places!</p>
+                                <h1 class="heroh1 mt-4">Enjoy the<span style="color: var(--theme-blue);">enchanted places</span> at Agra </h1>
+                                <span>
+                                    <button class="mt-4 mx-5 herobtn">Explore Us &nbsp&nbsp<i class="fa-solid fa-arrow-right-long"></i></button>
+                                    <button class="rounded-5 playbtn"><i class="fa-solid fa-play"></i></button> <span class="fw-bold" style="color: var(--theme-darksilver);">&nbsp&nbspView Demo</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="carousel-item active carousel-item-start" data-bs-interval="2000">
+                        <img src="https://dynamic-media-cdn.tripadvisor.com/media/photo-o/11/39/20/d9/the-heaven-of-a-grasshopper.jpg?w=900&h=-1&s=1" class="d-block w-100 heroCarouselImg" alt="...">
+                        <div class="carousel-caption d-none d-md-block gray p-5" style="transform: translateY(-10rem);">
+                            <div class="col-lg-10 mt-2 p-2 pl-2">
+                                <p class="herop px-3 fw-bold mt-4 w-50"><i class="fa-solid fa-plane fa-rotate-by" style="--fa-rotate-angle: -45deg;"></i> &nbsp &nbsp Explore the wonderful places!</p>
+                                <h1 class="heroh1 mt-4">Embark on a<span style="color: var(--theme-blue);"> blissful quest</span> towards kashmir</h1>
+                                <span>
+                                    <button class="mt-4 mx-5 herobtn">Explore Us &nbsp&nbsp<i class="fa-solid fa-arrow-right-long"></i></button>
+                                    <button class="rounded-5 playbtn"><i class="fa-solid fa-play"></i></button> <span class="fw-bold" style="color: var(--theme-darksilver);">&nbsp&nbspView Demo</span>
+                                </span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="prev">
+                    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Previous</span>
+                </button>
+                <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleCaptions" data-bs-slide="next">
+                    <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                    <span class="visually-hidden">Next</span>
+                </button>
+            </div>
         </section>
-        <section class="partners p-5 py-5 w-100  d-flex justify-content-center">
+        <section class="partners px-5 w-100 pb-5 d-flex justify-content-center" style="padding-top: 7rem;">
             <div class="owl-carousel px-0 mx-auto">
-                <div class="imgbox"> <img src="images/image 27.png" alt="Slide 1"> </div>
-                <div class="imgbox"> <img src="images/image 29.png" alt="Slide 1"> </div>
-                <div class="imgbox"> <img src="images/image 27.png" alt="Slide 1"> </div>
-                <div class="imgbox"> <img src="images/image 29.png" alt="Slide 1"> </div>
-                <div class="imgbox"> <img src="images/image 27.png" alt="Slide 1"> </div>
-                <div class="imgbox"> <img src="images/image 29.png" alt="Slide 1"> </div>
+                <div class="imgbox d-block rounded-3 bg-light p-2"> 
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSW3t8h_Tp5ROZRhHn3_t1Wi-rZbK3W3YG4tw&s" alt="Slide 1" class="rounded-3"> 
+                    <p class="text-center fw-bold">
+                        Force Urbania
+                    </p>
+                    <p class="text-center">
+                        <span>Available Now</span>
+                        <span>Price</span>
+                    </p>
+                </div>
+                <div class="imgbox d-block rounded-3 bg-light p-2"> 
+                    <img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSb7ZGnfEjEkoJbqmcFn2vQYX35shUw0zkx6Ii_4SHU5kwaue-gsUHzHKTPv4hRGKPMiPM&usqp=CAU" alt="Slide 1"> 
+                    <p class="text-center fw-bold">
+                        Force Urbania
+                    </p>
+                    <p class="text-center">
+                        <span>Available Now</span>
+                        <span>Price</span>
+                    </p>
+                </div>
+                <div class="imgbox d-block rounded-3 bg-light p-2"> 
+                    <img src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1733300575.jpg" alt="Slide 1"> 
+                    <p class="text-center fw-bold">
+                        Force Urbania
+                    </p>
+                    <p class="text-center">
+                        <span>Available Now</span>
+                        <span>Price</span>
+                    </p>
+                </div>
+                <div class="imgbox d-block rounded-3 bg-light p-2"> 
+                    <img src="https://www.cartoq.com/wp-content/uploads/2024/12/2025-honda-amaze-1.jpg.webp" alt="Slide 1"> 
+                    <p class="text-center fw-bold">
+                        Force Urbania
+                    </p>
+                    <p class="text-center">
+                        <span>Available Now</span>
+                        <span>Price</span>
+                    </p>
+                </div>
+                <div class="imgbox d-block rounded-3 bg-light p-2"> 
+                    <img src="https://images.91wheels.com//assets/b_images/main/models/profile/profile1733300575.jpg" alt="Slide 1"> 
+                    <p class="text-center fw-bold">
+                        Force Urbania
+                    </p>
+                    <p class="text-center">
+                        <span>Available Now</span>
+                        <span>Price</span>
+                    </p>
+                </div>
+                <div class="imgbox d-block rounded-3 bg-light p-2"> 
+                    <img src="https://www.cartoq.com/wp-content/uploads/2024/12/2025-honda-amaze-1.jpg.webp" alt="Slide 1"> 
+                    <p class="text-center fw-bold">
+                        Force Urbania
+                    </p>
+                    <p class="text-center">
+                        <span>Available Now</span>
+                        <span>Price</span>
+                    </p>
+                </div>
             </div>
         </section>
         <section class="favdes p-5 pb-2 w-100 bg-light">
@@ -105,16 +248,16 @@
             </div>
             <div class="row w-100 text-center my-5 mb-0 mx-auto d-flex justify-content-center">
                 <div class="col-lg-2 border-1 my-3 mb-1 imgbox ib1">
-                    <img src="images/image 4.png" alt="">
+                    <img src="https://www.peakadventuretour.com/assets/imgs/kashmir-tourism-01.webp" alt="">
                 </div>
                 <div class="col-lg-2 border-1 my-3 mb-1  imgbox ib2">
-                    <img src="images/image5.png" alt="">
+                    <img src="https://yowydh.infiniteuploads.cloud/2024/08/Manali.jpeg" alt="">
                 </div>
                 <div class="col-lg-2 border-1 my-3 mb-1 imgbox ib3">
-                    <img src="images/image 4.png" alt="">
+                    <img src="https://images.squarespace-cdn.com/content/v1/5558cd14e4b0251d92d46db6/d7b7fc26-3a51-4a35-82d0-e99dca8d94be/_3242023.jpg" alt="">
                 </div>
                 <div class="col-lg-2 border-1 my-3 mb-1 imgbox ib4">
-                    <img src="images/image5.png" alt="">
+                    <img src="https://cdn.sanity.io/images/ocl5w36p/prod2/159257a10154f222df6cdefc013134399db36863-1280x1760.jpg?w=480&fm=webp&dpr=2" alt="">
                 </div>
             </div>
         </section>
@@ -122,14 +265,14 @@
             
             <div class="col-lg-6">
                 <p class="mx-5 favdesp">Reserve For a Trip</p>
-                <h1 class="favdesh1 fw-bold mx-5 mb-5">Gak mau ngantri? reservasi aja! 🤙🏻</h1>
+                <h1 class="favdesh1 fw-bold mx-5 mb-5">Don't want to queue? Just make a reservation! 🤙🏻</h1>
                 <div class="my-2 reservemx d-flex">
                     <section class="d-flex align-items-center reserveimg">
                         <img src="images/eyeheart.png" alt="" height="40">
                     </section>
                     <section class="reservetext">
-                        <b>Cari tempat yang kamu mau</b>
-                        <p>Temukan destinasi selanjutnya yang akan kamu kunjungi dengan Destinize</p>
+                        <b>Comfort & Convenience</b>
+                        <p>Enjoy stress-free travel with well-maintained cars, experienced drivers, and door-to-door pickup and drop-off.</p>
                     </section>
                 </div>
                 <div class="my-2 reservemx d-flex">
@@ -137,8 +280,8 @@
                         <img src="images/eyeheart.png" alt="" height="40">
                     </section>
                     <section class="reservetext">
-                        <b>Cari tempat yang kamu mau</b>
-                        <p>Temukan destinasi selanjutnya yang akan kamu kunjungi dengan Destinize</p>
+                        <b>Affordable & Flexible</b>
+                        <p>Choose from budget-friendly options, customizable routes, and 24/7 availability to match your travel needs.</p>
                     </section>
                 </div>
                 <div class="my-2 reservemx d-flex">
@@ -146,32 +289,33 @@
                         <img src="images/eyeheart.png" alt="" height="40">
                     </section>
                     <section class="reservetext">
-                        <b>Cari tempat yang kamu mau</b>
-                        <p>Temukan destinasi selanjutnya yang akan kamu kunjungi dengan Destinize</p>
+                        <b>Safe & Reliable</b>
+                        <p>Travel with confidence in insured vehicles, GPS tracking, and professional service ensuring a smooth journey.</p>
                     </section>
                 </div>
             </div>
             <div class="col-lg-6 d-flex justify-content-center">
                 <div class="p-4 rounded-4 reservecon">
                     <div>
-                        <img src="images/reserve.jpg" alt="" height="160" class="rounded-5">
+                        <img src="https://media.cars24.com/hello-ar/dev/uploads/no_bg/f51729c6-c420-11ef-bd35-02ede2007fbe/676e50d13ed86e0be7dedf79/39e9b10e-40f4-4b2d-bbee-ed0ebe089b98/slot/10394428751-a4259c1b2b7441e2b5ac2a58d107e0b5-Exterior-7.png?w=240&auto=format&dpr=2&pad=48,0,0,0&trim-color=auto" alt="" height="160" class="rounded-5">
                     </div>
-                    <div class="mt-5">
-                        <b>Lorem Ipsum</b>
-                        <p class="mt-2" style="font-size: small; color: grey;">Lorem Ipsum Lorem Ipsum</p>
-                        <p class="mt-2" style="font-size: small; color: grey;">
-                            <i class="fa-solid fa-play"></i>
+                    <div class="mt-4">
+                        <b>Available for Price</b>
+                        <p class="mt-2" style="font-size: small; color: grey;">Enjoy your comfortable Trips with Sedans for city travel, and adventurous quests with SUVs.</p>
+                        <p class="mt-2 p-2 bg-primary text-white rounded-2 text-center w-50 mx-auto" style="font-size: small;">
+                            Aquire
+                            <!-- <i class="fa-solid fa-play"></i>
                             <i class="fa-solid fa-plane mx-2"></i>
-                            <i class="fa-solid fa-play mx-2"></i>
+                            <i class="fa-solid fa-play mx-2"></i> -->
                         </p>
                     </div>
                 </div>
             </div>
         </section>
         <section class="mapemb p-5 pt-2 w-100 bg-white d-flex flex-column">
-                <p class="mx-auto favdesp text-center">Cari Tempat Wisata</p>
+                <p class="mx-auto favdesp text-center">Find Tourist Attractions</p>
                 <h1 class="favdesh1 fw-bold mx-auto m-5 text-center"><i class="fa-solid fa-earth-americas"></i> &nbsp&nbspFind Tourist Attractions Near You</h1>
-                <p class="text-center mx-auto w-50 attract">Fitur ini memungkinkan kamu untuk mencari tempat wisata atau tempat yang sedang populer di daerah kamu dengan begitu kamu akan selalu update dan gak kudet lagi 👍🏻</p>
+                <p class="text-center mx-auto w-50 attract">This feature allows you to search for tourist attractions or places that are currently popular in your area so that you will always be updated and not out of date anymore 👍🏻</p>
                 <div class="mx-auto bg-light shadow" style="width: 90%; height: 400px;">
                     <iframe 
                         src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d65363997.56552682!2d28.140023248054966!3d0.7217082052618077!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sen!2sin!4v1739600377091!5m2!1sen!2sin" 
@@ -188,8 +332,8 @@
                             <i class="fa-solid fa-heart p-2 bg-secondary rounded-2"></i>
                         </div>
                         <div class="mx-4">
-                            <b>Popular Places</b>
-                            <p style="font-size: small;">Tempat pariwisata yang populer dan pasti dikenal semua orang didekatmu</p>
+                            <b>Hassle-Free Experience </b>
+                            <p style="font-size: small;">Enjoy seamless bookings, comfortable rides, and expertly planned itineraries for a stress-free journey.</p>
                         </div>
                     </div>
                     <div class="col-lg-3 mx-auto d-flex">
@@ -197,8 +341,8 @@
                             <i class="fa-solid fa-heart p-2 bg-secondary rounded-2"></i>
                         </div>
                         <div class="mx-4">
-                            <b>Popular Places</b>
-                            <p style="font-size: small;">Tempat pariwisata yang populer dan pasti dikenal semua orang didekatmu</p>
+                            <b>Affordable & Customizable</b>
+                            <p style="font-size: small;">Get budget-friendly packages with flexible options tailored to your travel preferences and needs.</p>
                         </div>
                     </div>
                     <div class="col-lg-3 mx-auto d-flex">
@@ -206,49 +350,49 @@
                             <i class="fa-solid fa-heart p-2 bg-secondary rounded-2"></i>
                         </div>
                         <div class="mx-4">
-                            <b>Popular Places</b>
-                            <p style="font-size: small;">Tempat pariwisata yang populer dan pasti dikenal semua orang didekatmu</p>
+                            <b>Safety & Reliability</b>
+                            <p style="font-size: small;">Travel with confidence in well-maintained vehicles, experienced drivers, and 24/7 customer support.</p>
                         </div>
                     </div>
                 </div>
         </section>
         <section class="gallery p-5 pb-2 w-100 bg-white">
-            <p class="mx-5 favdesp mb-5">MENGENAL DESTINIZE</p>
-            <h1 class="favdesh1 fw-bold mx-5 mb-2"><i class="fa-solid fa-image"></i> &nbspGaleri Pariwisata & Blog Travel</h1>
+            <p class="mx-5 favdesp mb-5">DELHI TRAVELS GALLERY</p>
+            <h1 class="favdesh1 fw-bold mx-5 mb-2"><i class="fa-solid fa-image"></i> &nbspTourism Gallery & Travel Blog</h1>
             <section class="mx-auto pt-4 d-flex herocon justify-content-center w-100">
                 <div class="col-lg-3 mt-5 shadow mx-auto rounded-2 overflow-hidden gallerycol3">
                     <div class="galleryimgbox p-0 text-center">
-                        <img src="images/cover.png" alt="" class="w-100">
+                        <img src="https://www.andbeyond.com/wp-content/uploads/sites/5/Jahangiri-Mahal-Agra-Fort1.jpg" alt="" class="w-100">
                     </div>
-                    <p class="fw-light text-secondary px-5 my-3 mx-auto">26 DESEMBER 2021</p>
-                    <b class="fw-bold mx-auto px-5 my-4 d-flex">Tips naik gunung Bromo Biar gak capek cyin 😥😛</b>
-                    <p class="px-5 text-secondary" style="font-size: small;">Jadi gini gann, anda tau bromo? yaaa gunung kann!</p>
-                    <p class="px-5" style="color: var(--theme-skyblue);">Baca selengkapnya ..</p>
+                    <p class="fw-light text-secondary px-5 my-3 mx-auto">26 DECEMBER 2024</p>
+                    <b class="fw-bold mx-auto px-5 my-4 d-flex">UNESCO World Heritage Site</b>
+                    <p class="px-5 text-secondary" style="font-size: small;">Red Fort, built in 1648 by Mughal Emperor Shah Jahan, is a UNESCO-listed historical marvel!</p>
+                    <p class="px-5" style="color: var(--theme-skyblue);">Read More ..</p>
                 </div>
                 <div class="col-lg-8 mt-5 mx-auto overflow-hidden rounded-2">
                     <div class="galleryimgbox text-center">
-                        <img src="images/cover2.jpg" alt="" class="w-100">
+                        <img src="https://www.rishirajholidays.com/wp-content/uploads/kasmir.jpg" alt="" class="w-100">
                     </div>
                 </div>
             </section>
-            <section class="mx-auto my-5 rounded-2 px-3 gallery3" style="background: url('images/cover3.jpg'); width: 95%; height: 280px; background-repeat: no-repeat; background-size: cover; position: relative;">  <div class="position-absolute p-5">
-                    <b class="text-white my-5" style="font-size: 35px;">Tips meminum air kawah biar lidah melepuh 😁</b>
-                    <p class="text-white my-5">Lidah melepuh? why nott, kawah bukan untuk dilihat kawan.. tapi untuk di minum.. rasakan kepanasan yang brutal 🔥</p>
-                    <b class="text-white text-small mt-5">Google Trending Baru</b>
+            <section class="mx-auto my-5 rounded-2 px-3 gallery3" style="background: url('https://media.tacdn.com/media/attractions-content--1x-1/10/65/bd/ac.jpg'); width: 95%; height: 280px; background-repeat: no-repeat; background-size: cover; position: relative; background-attachment: fixed;">  <div class="position-absolute p-5">
+                    <b class="text-white my-5" style="font-size: 35px;">India’s First Planned City</b>
+                    <p class="text-white my-5">Founded in 1727 by Maharaja Sawai Jai Singh II, Jaipur is India’s first planned city with a grid layout. 🔥</p>
+                    <b class="text-white text-small mt-5">Google It</b>
                 </div>
             </section>
         </section>
         <section class="testimonial p-5 pt-2 w-100 bg-white d-flex flex-column">
-            <p class="mx-auto favdesp text-center">TESTIMONIAL DESTINIZE</p>
-            <h1 class="favdesh1 fw-bold mx-auto m-5 text-center">💬 &nbsp&nbspApa Kata Mereka Tentang Kami</h1>
-            <p class="text-center d-flex mx-auto w-50" style="font-size: small;">Penasaran apa saja review dari pengguna yang memakai aplikasi dan website Destinize buat nentuin kemana liburan mereka selanjutnya? Yuk cek dibawah!</p>
+            <p class="mx-auto favdesp text-center">TESTIMONIAL</p>
+            <h1 class="favdesh1 fw-bold mx-auto m-5 text-center">💬 &nbsp&nbspWhat They Say About Us</h1>
+            <p class="text-center d-flex mx-auto w-50" style="font-size: small;">Curious about the reviews from users who use the Delhi Travels app and website to decide where their next vacation will be? Check them out below!</p>
             <div class="d-flex mx-auto my-5 justify-content-center testimonialdiv" style="width: 90%;">
                 <div class="col-lg-3 shadow testimoni rounded-3 text-center">
                     <div class="d-flex align-items-center justify-content-center my-auto h-50">
-                        <img src="images/testimonialimage.png" alt="" height="120" style="border-radius: 50%;">
+                        <img src="https://images.unsplash.com/photo-1607346256330-dee7af15f7c5?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8Mnx8aW5kaWFuJTIwZmFjZXN8ZW58MHx8MHx8fDA%3D" alt="" height="120" style="border-radius: 50%;">
                     </div>
                     <div class="text-center px-3">
-                        <p class="text-secondary" style="transform: translateY(-1.5rem);">Destinize membantu saya Mencari spot tempat wisata baru di Indonesia dengan Mudah</p>
+                        <p class="text-secondary" style="transform: translateY(-1.5rem);">Delhi Travels helps me find new tourist spots in India easily</p>
                         <p class="mb-0" style="transform: translateY(-1.5rem);">
                             <i class="fa-solid fa-star text-warning" ></i>
                             <i class="fa-solid fa-star text-warning"></i>
@@ -256,16 +400,16 @@
                             <i class="fa-solid fa-star text-warning"></i>
                             <i class="fa-regular fa-star text-warning"></i>
                         </p>
-                        <b class="my-0 text-primary" style="transform: translateY(-1.5rem);">Sandhika Galih</b>
-                        <p class="my-2 fw-bold">Dosen di WPU</p>
+                        <b class="my-0 text-primary" style="transform: translateY(-1.5rem);">Pravakar Chaturvedi</b>
+                        <p class="my-2 fw-bold">Tourists</p>
                     </div>
                 </div>
                 <div class="col-lg-3 shadow testimoni rounded-3 text-center">
                     <div class="d-flex align-items-center justify-content-center my-auto h-50">
-                        <img src="images/testimonialimage.png" alt="" height="120" style="border-radius: 50%;">
+                        <img src="https://st2.depositphotos.com/4153545/8121/i/450/depositphotos_81211808-stock-photo-young-woman-at-outdoors.jpg" alt="" height="120" style="border-radius: 50%;">
                     </div>
                     <div class="text-center px-3">
-                        <p class="text-secondary" style="transform: translateY(-1.5rem);">Destinize membantu saya Mencari spot tempat wisata baru di Indonesia dengan Mudah</p>
+                        <p class="text-secondary" style="transform: translateY(-1.5rem);">We rented a 12-seater Tempo Traveller for a family reunion, and the experience was fantastic!</p>
                         <p class="mb-0" style="transform: translateY(-1.5rem);">
                             <i class="fa-solid fa-star text-warning" ></i>
                             <i class="fa-solid fa-star text-warning"></i>
@@ -274,15 +418,15 @@
                             <i class="fa-regular fa-star text-warning"></i>
                         </p>
                         <b class="my-0 text-primary" style="transform: translateY(-1.5rem);">Sandhika Galih</b>
-                        <p class="my-2 fw-bold">Dosen di WPU</p>
+                        <p class="my-2 fw-bold">Tourists</p>
                     </div>
                 </div>
                 <div class="col-lg-3 shadow testimoni rounded-3 text-center">
                     <div class="d-flex align-items-center justify-content-center my-auto h-50">
-                        <img src="images/testimonialimage.png" alt="" height="120" style="border-radius: 50%;">
+                        <img src="https://media.istockphoto.com/id/1130630420/video/be-confident-when-pursuing-success.jpg?s=640x640&k=20&c=m-raP5a0hbqjvFXrMH837Nhha8giWMIte3HoUtAD9Gs=" alt="" height="120" style="border-radius: 50%;">
                     </div>
                     <div class="text-center px-3">
-                        <p class="text-secondary" style="transform: translateY(-1.5rem);">Destinize membantu saya Mencari spot tempat wisata baru di Indonesia dengan Mudah</p>
+                        <p class="text-secondary" style="transform: translateY(-1.5rem);">We Enjoyed Delhi Trvels Trip and We find everything is smooth.</p>
                         <p class="mb-0" style="transform: translateY(-1.5rem);">
                             <i class="fa-solid fa-star text-warning" ></i>
                             <i class="fa-solid fa-star text-warning"></i>
@@ -290,8 +434,8 @@
                             <i class="fa-solid fa-star text-warning"></i>
                             <i class="fa-regular fa-star text-warning"></i>
                         </p>
-                        <b class="my-0 text-primary" style="transform: translateY(-1.5rem);">Sandhika Galih</b>
-                        <p class="my-2 fw-bold">Dosen di WPU</p>
+                        <b class="my-0 text-primary" style="transform: translateY(-1.5rem);">Hardik Khan</b>
+                        <p class="my-2 fw-bold">Tourists</p>
                     </div>
                 </div>
             </div>
@@ -299,9 +443,17 @@
         <section class="bluebft p-5 pt-2 w-100 bg-white d-flex flex-column mb-5" style="padding-bottom: 10rem !important;">
             <div class="mx-auto shadow rounded-4 d-flex justify-content-between" style="width: 90%; height: 360px; background-color: var(--theme-blue2); overflow: hidden;">
                 <div class="col-lg-5">
-                    <h2 class="my-5 mx-5 text-white">Lorem ipsum dolor</h2>
-                    <p class="my-5 mx-5 text-white" style="font-size: .9rem;">Lorem ipsum, dolor sit amet consectetur adipisicing elit. Fuga ipsum sapiente veritatis quibusdam incidunt illum, tempore est expedita a nam explicabo accusamus deserunt cumque, nostrum dignissimos. In fuga exercitationem corporis?</p>
-                    <p class="m-5 fw-bold text-white">Lorem ipsum dolor sit amet <i class="fa-solid fa-arrow-right-long"></i></p>
+                    <h2 class="my-5 mx-5 text-white">Contact Form</h2>
+                    <p class="my-2 mx-5 text-white" style="font-size: .9rem;">
+                        <input type="text" placeholder="your name" class="rounded-1 border-0 p-1 w-100">
+                    </p>
+                    <p class="my-2 mx-5 text-white" style="font-size: .9rem;">
+                        <input type="text" placeholder="your name" class="rounded-1 border-0 p-1 w-100">
+                    </p>
+                    <p class="my-2 mx-5 text-white" style="font-size: .9rem;">
+                        <textarea  placeholder="your message" class="rounded-1 border-0 p-1 w-100" style="resize: none; height: 5rem;"></textarea>
+                    </p>
+                    <p class="mx-5 my-3 fw-bold text-white bg-secondary p-2 rounded-1 w-50 text-center">Submit<i class="fa-solid fa-arrow-right-long"></i></p>
                 </div>
                 <div class="col-lg-5" style="overflow: hidden;">
                     <img src="images/blueftimg.png" alt="" style="width: 100%; height: 100%;">
@@ -324,14 +476,14 @@
             margin: 20,               // Space between items
             nav: false,                // Show navigation arrows
             autoplay: true,           // Enable autoplay
-            autoplayTimeout: 1500,    // Time between slides (2000ms = 2s)
+            autoplayTimeout: 2500,    // Time between slides (2000ms = 2s)
             autoplayHoverPause: true,
             rtl: true,
             responsive: {
                 0: { items: 1 },      // 1 item on small screens
                 600: { items: 2 },    // 2 items on medium screens
                 800: { items: 3 },
-                1000: { items: 5 },    // 3 items on large screens
+                1000: { items: 4 },    // 3 items on large screens
             }
         });
     });
@@ -346,10 +498,16 @@
     }
 
     // Example: Update the content dynamically
-    updateBeforeContent('.favdes .ib1', 'Cannada');
-    updateBeforeContent('.favdes .ib2', 'London');
-    updateBeforeContent('.favdes .ib3', 'Dubai');
-    updateBeforeContent('.favdes .ib4', 'Italy');
+    updateBeforeContent('.favdes .ib1', 'Kashmir – Paradise on Earth, with scenic valleys, serene lakes, snowy peaks, and rich culture.');
+    updateBeforeContent('.favdes .ib2', 'Manali – A Himalayan paradise with snow-capped peaks, lush valleys, adventure sports, and serene beauty.');
+    updateBeforeContent('.favdes .ib3', 'Agra – Home to the iconic Taj Mahal, rich history, Mughal architecture, and timeless cultural heritage.');
+    updateBeforeContent('.favdes .ib4', 'Jaipur – The Pink City of royal palaces, vibrant culture, majestic forts, and rich heritage.');
 
     </script>
+    <!-- AOS JS -->
+    <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+    <script>
+        AOS.init(); // Initialize AOS
+    </script>
+
 </html>
