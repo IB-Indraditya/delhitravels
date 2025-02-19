@@ -18,6 +18,7 @@
             list-style: none;
         }
         .navitemcontainer{
+            display: flex;
             transform: translate(100px, 0px);
         }
         @media (max-width: 1210px){
@@ -36,6 +37,7 @@
         @media (max-width: 992px){
             .navitemcontainer .nav-item {
                 margin: 1rem !important;
+                flex-direction: column;
             }
             .br{
                 display: none;
@@ -131,7 +133,7 @@
             
             
             <div class="collapse navbar-collapse " id="navbar-content">
-                <ul class="mb-2 mb-lg-0 d-flex navitemcontainer" style="list-style: none;">
+                <ul class="mb-2 mb-lg-0 navitemcontainer" style="list-style: none;">
                     <li class="nav-item">
                         <a class="nav-link" href="index.html">Home</a>
                     </li>
@@ -198,8 +200,9 @@
 </section>
 <script>
     document.querySelector('.hamburger').addEventListener("click", ()=>{
-        document.querySelector(".navbar-collapse").classList.toggle('show');
+        document.querySelector(".navbar-collapse").classList.remove('show');
+        // document.querySelector(".navbar-collapse").classList.toggle('show');
         document.querySelector(".navitemcontainer").classList.toggle('show');
-        document.querySelector(".navlocation").classList.toggle('showblock');
+        document.querySelector(".navcontact").classList.toggle('showblock');
     });
 </script>
