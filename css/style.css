@@ -167,6 +167,9 @@ a{
     transition: .5s;
     color: #4372EB;
 }
+input:focus, textarea:focus{
+    outline: none;
+}
 .favdes .imgbox img{
     /* min-width: 300px; */
     width: 100%;
