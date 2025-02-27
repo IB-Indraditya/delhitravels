@@ -103,6 +103,7 @@ a{
     padding: 12px 15px;
     background: white;
     box-shadow: 5px 5px 10px silver;
+    transform: translate(20px);
 }
 .playbtn i{
     color: var(--theme-blue);
